@@ -1,0 +1,232 @@
+		},
+		"EZ Welding Torch": {
+			"craftingReqs": {
+				"ceramic": 30.0,
+				"basic parts": 25.0
+			},
+			"results": "ent_aboot_gmod_ezwelder",
+			"category": "Tools",
+			"craftingType": [
+				"workbench",
+				"craftingtable"
+			],
+			"description": "You can weld steel stuff with this thing."
+		},
+		"EZ Welding Mask": {
+			"craftingReqs": {
+				"steel": 50.0,
+				"basic parts": 10.0
+			},
+			"results": "ent_aboot_gmod_ezarmor_weldingmask",
+			"category": "Apparel",
+			"craftingType": [
+				"workbench",
+				"craftingtable"
+			],
+			"description": "Protect your eyes from sun and welding flash."
+		},
+		"EZ Grinder": {
+			"craftingReqs": {
+				"steel": 120.0,
+				"tungsten": 15.0,
+				"basic parts": 100.0
+			},
+			"results": "ent_aboot_gmod_ezpowertools",
+			"sizeScale": 2.0,
+			"category": "Machines",
+			"craftingType": "toolbox",
+			"description": "Automatically salvages props that touch the blade."
+		},
+		"EZ Ammo Crate": {
+			"craftingReqs": {
+				"steel": 70.0,
+				"aluminum": 50.0
+			},
+			"results": "ent_aboot_gmod_ezammocrate",
+			"sizeScale": 2.0,
+			"category": "Other",
+			"craftingType": "toolbox",
+			"description": "Can store a lot of ammunition."
+		},
+		"EZ Capacitor": {
+			"craftingReqs": {
+				"copper": 30.0,
+				"basic parts": 50.0
+			},
+			"results": "ent_aboot_gmod_ezcapacitor",
+			"sizeScale": 0.2,
+			"category": "Machines",
+			"craftingType": "toolbox",
+			"description": "Everything can become electric fence if it is metal."
+		},
+		"EZ Ground Pounder": {
+			"craftingReqs": {
+				"steel": 50.0,
+				"tungsten": 20.0,
+				"basic parts": 75.0
+			},
+			"results": "ent_aboot_gmod_ezpounder",
+			"sizeScale": 2.0,
+			"category": "Machines",
+			"craftingType": "toolbox",
+			"description": "Beats ground to get ore."
+		},
+		"EZ Shipping Container": {
+			"craftingReqs": {
+				"steel": 900.0
+			},
+			"results": "ent_aboot_gmod_ezshippingcontainer",
+			"sizeScale": 12.0,
+			"category": "Other",
+			"craftingType": "toolbox",
+			"description": "To store all your precious resources."
+		},
+		"EZ Utility Crate": {
+			"craftingReqs": {
+				"steel": 150.0
+			},
+			"results": "ent_fumo_gmod_ezutilitycrate",
+			"sizeScale": 2.0,
+			"category": "Other",
+			"craftingType": "toolbox",
+			"description": "To store not all your precious resources."
+		},
+		"EZ Campfire": {
+			"craftingReqs": {
+				"ceramic": 25.0,
+				"wood": 50.0,
+				"steel": 25.0
+			},
+			"results": "ent_fumo_gmod_ezcampfire",
+			"sizeScale": 1.0,
+			"category": "Other",
+			"craftingType": "toolbox",
+			"description": "Smelts all your stuff."
+		},
+		"EZ TeleNade": {
+			"craftingReqs": {
+				"basic parts": 25.0,
+				"fissile material": 5.0,
+				"precision parts": 50.0
+			},
+			"results": "ent_aboot_gmod_eztelenade",
+			"category": "Other",
+			"craftingType": [
+				"fabricator"
+			],
+			"description": "Throw it and wait."
+		},
+		"Zero Point Energy Field Manipulator": {
+			"craftingReqs": {
+				"basic parts": 150.0,
+				"fissile material": 10.0,
+				"precision parts": 50.0
+			},
+			"results": "weapon_physcannon",
+			"category": "Tools",
+			"craftingType": [
+				"fabricator"
+			],
+			"description": "Device to carry heavy stuff."
+		},
+		"Physics Manipulator": {
+			"craftingReqs": {
+				"basic parts": 300.0,
+				"fissile material": 15.0,
+				"precision parts": 150.0
+			},
+			"results": "weapon_physgun",
+			"category": "Tools",
+			"craftingType": [
+				"fabricator"
+			],
+			"description": "Very advanced device to carry heavy stuff."
+		},
+		"EZ Health Kit": {
+			"craftingReqs": {
+				"basic parts": 15.0,
+				"medical supplies": 25.0,
+				"advanced parts": 1.0
+			},
+			"results": "ent_fumo_gmod_ezhealtkit",
+			"category": "Other",
+			"craftingType": [
+				"fabricator"
+			],
+			"description": "Heals you by 25 health."
+		},
+		"EZ Health Vial": {
+			"craftingReqs": {
+				"basic parts": 5.0,
+				"medical supplies": 10.0,
+				"advanced parts": 1.0
+			},
+			"results": "ent_fumo_gmod_ezhealthvial",
+			"category": "Other",
+			"craftingType": [
+				"fabricator"
+			],
+			"description": "Heals you by 10 health."
+		},
+		"EZ Suit Battery": {
+			"craftingReqs": {
+				"basic parts": 10.0,
+				"power": 150.0,
+				"advanced parts": 1.0
+			},
+			"results": "ent_fumo_gmod_ezsuitbattery",
+			"category": "Other",
+			"craftingType": [
+				"fabricator"
+			],
+			"description": "Adds 15 suit energy."
+		},
+		"EZ Standard Ration": {
+			"craftingReqs": {
+				"basic parts": 5.0,
+				"nutrients": 10.0,
+				"plastic": 5.0
+			},
+			"results": "ent_fumo_gmod_ezration",
+			"category": "Other",
+			"craftingType": [
+				"fabricator"
+			],
+			"description": "Meal ready to eat."
+		},
+		"Сompass": {
+			"craftingReqs": {
+				"chemicals": 1.0,
+				"plastic": 3.0
+			},
+			"results": "ent_fumo_gmod_compass",
+			"category": "Other",
+			"craftingType": [
+				"workbench"
+			],
+			"description": "Useful."
+		},
+		"MELMET": {
+			"craftingReqs": {
+				"organics": 20.0
+			},
+			"results": "ent_fumo_gmod_ezmelmet",
+			"category": "Apparel",
+			"craftingType": [
+				"workbench",
+				"craftingtable"
+			],
+			"description": "Protect ur meat melon."
+		},
+		"EZ Projector": {
+			"craftingReqs": {
+				"steel": 50.0,
+				"glass": 15.0,
+				"basic parts": 25.0
+			},
+			"results": "ent_fumo_gmod_ezprojector",
+			"sizeScale": 1.0,
+			"category": "Machines",
+			"craftingType": "toolbox",
+			"description": "Lights ur base."
+		},
