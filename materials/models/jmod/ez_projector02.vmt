@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	$basetexture	models/jmod/ez_projector02
+	$detail detail\metal_detail_01
+}

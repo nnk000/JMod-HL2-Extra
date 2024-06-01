@@ -1,0 +1,11 @@
+VertexLitGeneric
+{
+	$basetexture	models/jmod/fumo_utility_crate
+	$bumpmap	models/items/ammocrate_normal
+	$normalmapalphaenvmapmask	1
+	$detail detail\metal_detail_01
+	$phong	1
+	$phongexponent	32
+	$phongboost	1
+	$phongfresnelranges "[ .7 .7 .7 ]"
+}

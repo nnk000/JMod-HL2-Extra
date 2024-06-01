@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	$basetexture	models/jmod/ez_campfire
+	$detail detail/plaster_detail_01
+}
