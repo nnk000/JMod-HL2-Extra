@@ -217,6 +217,26 @@ elseif(CLIENT)then
 		--models/props_junk/garbage_metalcan002a.mdl
 	end
 
+	function ENT:Think()
+		local State, Fuel, Pos, Ang = self:GetState(), self:GetElectricity(), self:GetPos(), self:GetAngles()
+
+		if State == STATE_PROCESSING then
+			local Up, Right, Forward, Mult = Ang:Up(), Ang:Right(), Ang:Forward(), Fuel*0.005
+			local DLight = DynamicLight(self:EntIndex())
+
+			if DLight then
+				DLight.Pos = Pos + Up * 10 + Vector(0, 0, 20)
+				DLight.r = 255
+				DLight.g = 245
+				DLight.b = 65
+				DLight.Brightness = math.Rand(.5, 1) * Mult
+				DLight.Size = math.random(1300, 1500) * Mult
+				DLight.DieTime = CurTime() + .3
+				DLight.Style = 0
+			end
+		end
+	end
+
 	function ENT:DrawTranslucent()
 		local State = self:GetState()
 		local SelfPos,SelfAng=self:GetPos(),self:GetAngles()
