@@ -230,7 +230,7 @@ elseif(CLIENT)then
 				DLight.g = 245
 				DLight.b = 65
 				DLight.Brightness = math.Rand(.5, 1) * Mult
-				DLight.Size = math.random(1300, 1500) * Mult
+				DLight.Size = math.random(1300, 1500) * Mult * 0.5
 				DLight.DieTime = CurTime() + .3
 				DLight.Style = 0
 			end
