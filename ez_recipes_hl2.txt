@@ -235,7 +235,7 @@
 				"steel": 100.0,
 				"copper": 100.0,
 				"precision parts": 25.0,
-				"basic parts": 50.0
+				"basic parts": 100.0
 			},
 			"results": "ent_fumo_gmod_ezinductionfurnace",
 			"sizeScale": 1.5,
