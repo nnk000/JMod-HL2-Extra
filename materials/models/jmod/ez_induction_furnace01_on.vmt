@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture	models/jmod/ez_induction_furnace01_on
+	$detail detail\metal_detail_01
+	$selfillum	1
+}
