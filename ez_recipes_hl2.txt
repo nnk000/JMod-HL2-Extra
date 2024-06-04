@@ -25,6 +25,19 @@
 			],
 			"description": "Protect your eyes from sun and welding flash."
 		},
+		"Chair": {
+			"craftingReqs": {
+				"steel": 50.0,
+				"cloth": 25.0
+			},
+			"results": "ent_fumo_gmod_ezchair",
+			"category": "Other",
+			"craftingType": [
+				"workbench",
+				"craftingtable"
+			],
+			"description": "Take a rest."
+		},
 		"EZ Grinder": {
 			"craftingReqs": {
 				"steel": 120.0,
