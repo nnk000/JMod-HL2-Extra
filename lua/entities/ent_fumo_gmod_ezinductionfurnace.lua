@@ -9,7 +9,7 @@ ENT.Information = "Smelts stuff, need A LOT of power"
 ENT.Spawnable = true
 ENT.AdminSpawnable = true
 ENT.Model = "models/jmod/ez_induction_furnace.mdl"
-ENT.Mass = 90
+ENT.Mass = 110
 ENT.JModPreferredCarryAngles = Angle(0, 0, 0)
 ENT.RenderGroup = RENDERGROUP_TRANSLUCENT
 ENT.EZconsumes = {
@@ -45,9 +45,6 @@ end
 if(SERVER)then
 	function ENT:CustomInit()
 		local phys = self.Entity:GetPhysicsObject()
-		if phys:IsValid()then
-			phys:SetBuoyancyRatio(.3)
-		end
 		if not(self.EZowner)then self:SetColor(Color(255, 255, 255)) end
 		self:SetProgress(0)
 		self:SetOre(0)
