@@ -25,7 +25,7 @@
 			],
 			"description": "Protect your eyes from sun and welding flash."
 		},
-		"Chair": {
+		"Camping Chair": {
 			"craftingReqs": {
 				"steel": 50.0,
 				"cloth": 25.0
@@ -33,8 +33,7 @@
 			"results": "ent_fumo_gmod_ezchair",
 			"category": "Other",
 			"craftingType": [
-				"workbench",
-				"craftingtable"
+				"workbench"
 			],
 			"description": "Take a rest."
 		},
@@ -255,4 +254,30 @@
 			"category": "Machines",
 			"craftingType": "toolbox",
 			"description": "Power go brrr."
+		},
+		"CRATE": {
+			"craftingReqs": {
+				"wood": 100.0,
+				"basic parts": 20.0
+			},
+			"results": "ent_fumo_gmod_cratepack",
+			"category": "Apparel",
+			"craftingType": [
+				"workbench",
+				"craftingtable"
+			],
+			"description": "sus."
+		},
+		"EZ Sky Lantern": {
+			"craftingReqs": {
+				"paper": 15.0,
+				"organics": 10.0
+			},
+			"results": "ent_fumo_gmod_ezskylantern",
+			"category": "Other",
+			"craftingType": [
+				"workbench",
+				"craftingtable"
+			],
+			"description": "Festival!"
 		},
