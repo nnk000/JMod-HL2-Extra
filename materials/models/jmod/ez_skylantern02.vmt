@@ -1,0 +1,9 @@
+VertexLitGeneric
+{
+	$basetexture	models/jmod/ez_skylantern01
+///	$blendtintbybasealpha	1
+	$nocull	1
+	$selfillum	1
+
+	$selfillummask models/jmod/ez_skylantern01_mask
+}

@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture	models/jmod/ez_skylantern01
+	$blendtintbybasealpha	1
+	$nocull	1
+}

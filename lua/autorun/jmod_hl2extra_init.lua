@@ -2,8 +2,8 @@ if CLIENT then
 	list.Set( "ContentCategoryIcons", "JMod - EZ HL:2 Extra", "jmod_icon_hl2extra.png" )
 end
 
-JMod.AdditionalArmorTable = JMod.AdditionalArmorTable or {}
-JMod.AdditionalArmorTable = {
+
+local FumoArmor = {
 	["MELMET"] = {
 		PrintName = "MELMET",
 		Category = "JMod - EZ HL:2 Extra",
@@ -54,3 +54,4 @@ JMod.AdditionalArmorTable = {
 		ent = "ent_fumo_gmod_cratepack"
 	}
 }
+table.Merge(JMod.AdditionalArmorTable, FumoArmor)
