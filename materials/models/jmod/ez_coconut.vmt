@@ -1,0 +1,9 @@
+VertexLitGeneric
+{
+	$basetexture	models/jmod/ez_coconut
+	$bumpmap	models/jmod/ez_coconut_n
+	$phong	1
+	$phongexponent	8
+	$phongboost	.5
+	$phongfresnelranges "[ .3 .3 .3 ]"
+}

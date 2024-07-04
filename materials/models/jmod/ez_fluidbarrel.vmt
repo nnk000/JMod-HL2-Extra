@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture	models/jmod/ez_fluidbarrel
+	$bumpmap	models/jmod/ez_fluidbarrel_n
+	$blendtintbybasealpha	1
+	$phong	1
+	$phongexponent	16
+	$phongboost	1
+	$phongfresnelranges	"[ .4 .4 .4 ]"
+}

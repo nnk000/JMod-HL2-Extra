@@ -1,4 +1,5 @@
 VertexLitGeneric
 {
 	$basetexture	models/jmod/eztruck/eztruck_wheel
+	$halflambert	1
 }
