@@ -86,7 +86,7 @@ if(SERVER)then
 		if (State == STATE_PROCESSING) or (State == STATE_BROKEN) then return end
 		if (self:GetElectricity() <= 0) then JMod.Hint(activator, "refill") return end
 		self:SetState(STATE_PROCESSING)
-		self:EmitSound("snd_jack_littleignite.wav")
+		self:EmitSound("snd_jack_littleignite.ogg")
 		timer.Simple(0.1, function()
 			if(self.SoundLoop)then self.SoundLoop:Stop() end
 			self.SoundLoop = CreateSound(self, "snds_jack_gmod/intense_fire_loop.wav")
@@ -117,7 +117,7 @@ if(SERVER)then
 					Foof:SetScale(10)
 					Foof:SetStart(self:GetPhysicsObject():GetVelocity())
 					util.Effect("eff_jack_gmod_ezsteam", Foof, true, true)
-					self:EmitSound("snds_jack_gmod/hiss.wav", 120, 90)
+					self:EmitSound("snds_jack_gmod/hiss.ogg", 120, 90)
 					return 
 				end
 				if not OreTyp then self:TurnOff() return end
@@ -193,7 +193,7 @@ if(SERVER)then
 				end
 			end)
 			self:SetProgress(0)
-			self:EmitSound("snds_jack_gmod/ding.wav", 80, 120)
+			self:EmitSound("snds_jack_gmod/ding.ogg", 80, 120)
 		end
 
 		local OreLeft = self:GetOre()

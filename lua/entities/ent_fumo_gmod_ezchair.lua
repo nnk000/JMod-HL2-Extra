@@ -86,7 +86,7 @@ elseif (SERVER) then
 		self:DrawShadow(true)
 		self:SetUseType(SIMPLE_USE)
 
-		sound.Play("snds_jack_gmod/beartrap_set.wav", self:GetPos(), 65, math.random(90, 110))
+		sound.Play("snds_jack_gmod/beartrap_set.ogg", self:GetPos(), 65, math.random(90, 110))
 		
 		local phys = self:GetPhysicsObject()
 		if phys:IsValid() then
@@ -119,7 +119,7 @@ elseif (SERVER) then
 		if (Tr.Hit) then
 			self:SetPos(Tr.HitPos + Tr.HitNormal)
 		end
-		sound.Play("snds_jack_gmod/beartrap_set.wav", self:GetPos(), 65, math.random(90, 110))
+		sound.Play("snds_jack_gmod/beartrap_set.ogg", self:GetPos(), 65, math.random(90, 110))
 		self:CreatePod()
 		local UpTrace = util.QuickTrace(self:GetPos(), Vector(0, 0, 16), self)
 		self:SetPos(UpTrace.HitPos)

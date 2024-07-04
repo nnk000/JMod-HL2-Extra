@@ -107,7 +107,7 @@ if SERVER then
 	function ENT:Light()
 		if self:GetState() == STATE_BURNT then return end
 		self:SetState(STATE_BURNIN)
-		self:EmitSound("snd_jack_littleignite.wav", 50)
+		self:EmitSound("snd_jack_littleignite.ogg", 50)
 		self:SetSkin(1)
 		self:StartMotionController()
 		local phys = self.Entity:GetPhysicsObject()

@@ -136,7 +136,7 @@ if(SERVER)then
 			elseif State == STATE_OFF then
 				if Alt then
 					self:TurnOn(Dude)
-					self:EmitSound("snd_jack_minearm.wav", 60, 100)
+					self:EmitSound("snd_jack_minearm.ogg", 60, 100)
 				else
 					constraint.RemoveConstraints(self, weld)
 					self.StuckStick = nil
@@ -147,7 +147,7 @@ if(SERVER)then
 				end
 			elseif State == STATE_ON then
 				if Alt then
-					self:EmitSound("snd_jack_minearm.wav", 60, 70)
+					self:EmitSound("snd_jack_minearm.ogg", 60, 70)
 					self:TurnOff(Dude)
 				else
 					constraint.RemoveConstraints(self, weld)
@@ -177,7 +177,7 @@ if(SERVER)then
 						self.StuckStick = Weld
 					end
 
-					self:EmitSound("snd_jack_claythunk.wav", 65, math.random(80, 120))
+					self:EmitSound("snd_jack_claythunk.ogg", 65, math.random(80, 120))
 					Dude:DropObject()
 					JMod.Hint(Dude, "arm")
 				end

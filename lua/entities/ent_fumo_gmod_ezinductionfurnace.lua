@@ -146,7 +146,7 @@ if(SERVER)then
 				self.NextSmeltThink = Time + 1
 				if (self:WaterLevel() > 0) then 
 					self:TurnOff() 
-					self:EmitSound("snds_jack_gmod/hiss.wav", 120, 90)
+					self:EmitSound("snds_jack_gmod/hiss.ogg", 120, 90)
 					return 
 				end
 				if not OreTyp then self:TurnOff() return end
@@ -190,7 +190,7 @@ if(SERVER)then
 				end
 			end)
 			self:SetProgress(0)
-			self:EmitSound("snds_jack_gmod/ding.wav", 80, 120)
+			self:EmitSound("snds_jack_gmod/ding.ogg", 80, 120)
 		end
 
 		local OreLeft = self:GetOre()

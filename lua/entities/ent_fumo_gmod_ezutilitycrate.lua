@@ -2,7 +2,7 @@
 AddCSLuaFile()
 ENT.Type = "anim"
 ENT.PrintName = "EZ Utility Crate"
-ENT.Author = "Jackarunda, AdventureBoots, Fumo"
+ENT.Author = "Jackarunda, AdventureBoots, TheOnly8Z, Fumo"
 ENT.Category = "JMod - EZ HL:2 Extra"
 ENT.NoSitAllowed = true
 ENT.Spawnable = true
@@ -41,6 +41,7 @@ function ENT:SetEZsupplies(typ, amt, setter)
 			net.WriteString(typ)
 			net.WriteInt(amt, 32)
 		net.Broadcast()
+		self:CalcWeight()
 	end
 end
 ---
@@ -396,7 +397,7 @@ elseif CLIENT then
 						self.hovered = true
 
 						if self.enabled then
-							surface.PlaySound("snds_jack_gmod/ez_gui/hover_ready.wav")
+							surface.PlaySound("snds_jack_gmod/ez_gui/hover_ready.ogg")
 						end
 					end
 				else
@@ -441,11 +442,11 @@ elseif CLIENT then
 						end
 					end)
 
-					surface.PlaySound("snds_jack_gmod/ez_gui/click_big.wav")
+					surface.PlaySound("snds_jack_gmod/ez_gui/click_big.ogg")
 					MotherFrame.positiveClosed = true
 					MotherFrame:Close()
 				else
-					surface.PlaySound("snds_jack_gmod/ez_gui/miss.wav")
+					surface.PlaySound("snds_jack_gmod/ez_gui/miss.ogg")
 				end
 			end
 

@@ -28,7 +28,6 @@ local FumoArmor = {
 		ang = Angle(-90, 0, -90),
 		wgt = 4,
 		dur = 10,
-		mskmat = "mats_jack_gmod_sprites/one-quarter-from-top-blocked.png",
 		ent = "ent_fumo_gmod_ezmelmet"
 	},
 	["CRATE"] = {
