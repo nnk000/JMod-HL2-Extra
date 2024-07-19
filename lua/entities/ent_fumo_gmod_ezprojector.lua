@@ -120,7 +120,9 @@ if(SERVER)then
 		self:SetSkin(2)
 	end
 	
-	
+	function ENT:OnRepair()
+		self:SetSkin(1)
+	end
 	function ENT:Use(activator, activatorAgain, onOff)
 		local Dude = activator or activatorAgain
 		local Time = CurTime()

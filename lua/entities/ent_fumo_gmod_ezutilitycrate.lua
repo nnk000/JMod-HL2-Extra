@@ -1,4 +1,4 @@
--- Jackarunda 2021 but stolen by Fumo 2024
+-- AdventureBoots 2023 but stolen by Fumo 2024
 AddCSLuaFile()
 ENT.Type = "anim"
 ENT.PrintName = "EZ Utility Crate"
@@ -31,7 +31,6 @@ function ENT:GetEZsupplies(typ)
 end
 
 function ENT:SetEZsupplies(typ, amt, setter)
-	if not self.Contents[typ] then /*error(tostring(typ)..", "..tostring(self.Contents[typ])..", "..tostring(amt))*/ return end
 	self.Contents[typ] = amt
 	self:SetResource(math.Clamp(amt, 0, self.MaxResource))
 	if SERVER then
@@ -161,33 +160,27 @@ if SERVER then
 		self:EmitSound("Ammo_Crate.Open")
 	end
 
-	net.Receive("ABoot_ContainerMenu", function() 
-		local Container = net.ReadEntity()
-		local ResourceType = net.ReadString()
-		local Amount = net.ReadUInt(17)
-
-		if not IsValid(Container) then return end
-
-		local AmountLeft = Container.Contents[ResourceType]
+	function ENT:DropContents(ply, resTyp, amt)
+		local AmountLeft = self.Contents[resTyp]
 		if AmountLeft <= 0 then return end
-		local Needed = math.min(Amount, AmountLeft)
+		local Needed = math.min(amt, AmountLeft)
 		for i = 1, math.ceil(Needed / 100) do
 			timer.Simple(0.3 * i, function()
-				if not IsValid(Container) then return end
-				local Box, Given = ents.Create(JMod.EZ_RESOURCE_ENTITIES[ResourceType]), math.min(Needed, 100)
-				Box:SetPos(Container:GetPos() + Container:GetForward() * 32 + Container:GetUp() * 15)
-				Box:SetAngles(Container:GetAngles())
+				if not IsValid(self) then return end
+				local Box, Given = ents.Create(JMod.EZ_RESOURCE_ENTITIES[resTyp]), math.min(Needed, 100)
+                Box:SetPos(self:GetPos() + self:GetForward() * 32 + self:GetUp() * 15)
+				Box:SetAngles(self:GetAngles())
 				Box:Spawn()
 				Box:Activate()
-				Box:SetResource(Given)
+				Box:SetEZsupplies(Box.EZsupplies, Given, self)
 				Box.NextLoad = CurTime() + 2
 				Needed = Needed - Given
-				Container:CalcWeight()
+				self:CalcWeight()
 			end)
 		end
-		Container.Contents[ResourceType] = Container.Contents[ResourceType] - Needed
-		Container.NextUse = CurTime() + 1
-	end)
+		self.Contents[resTyp] = self.Contents[resTyp] - Needed
+		self.NextUse = CurTime() + 1
+	end
 
 	function ENT:Think()
 	end
@@ -220,6 +213,13 @@ if SERVER then
 		net.Broadcast()
 
 		return Accepted
+	end
+
+	function ENT:PostEntityPaste(ply, ent, createdEntities)
+		self:CalcWeight()
+		local Time = CurTime()
+		self.NextLoad = Time
+		self.NextUse = Time
 	end
 
 elseif CLIENT then

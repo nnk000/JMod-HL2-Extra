@@ -176,9 +176,12 @@ if(SERVER)then
 
 		local spawnVec = self:WorldToLocal(SelfPos + Forward * 16 + Up * 40)
 		local spawnAng = self:GetAngles()
+		if self:GetOre() < 0 then
+			self:SetOre(0)
+		end
 		local ejectVec = Up * 50
 		self:SetBodygroup(1, 0)
-
+		self:SetSkin(0)
 		if amt > 0 or OreType ~= "generic" then
 			local RefinedType = JMod.SmeltingTable[OreType][1]
 			timer.Simple(0.3, function()
