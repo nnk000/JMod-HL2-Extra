@@ -155,8 +155,8 @@ if SERVER then
 	end
 
 	function ENT:PhysicsSimulate( phys, deltatime )
-		
-		local vLinear = Vector( math.random(10, 150) * 10, math.random(10, 150) * 10, math.random(3, 15) * 100 ) * deltatime
+		local WindFactor = JMod.Wind * math.random(1, 25)
+		local vLinear = WindFactor +  Vector(0, 0, math.random(5, 150)) * deltatime
 		local vAngular = vector_origin
 
 		return vAngular, vLinear, SIM_GLOBAL_FORCE
