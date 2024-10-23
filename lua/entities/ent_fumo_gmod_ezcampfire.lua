@@ -12,6 +12,7 @@ ENT.RenderGroup = RENDERGROUP_TRANSLUCENT
 ENT.Model = "models/jmod/ez_campfire.mdl"
 ENT.Mass = 45
 ENT.JModPreferredCarryAngles = Angle(0, 0, 0)
+ENT.EZbouyancy = 0.1
 ENT.EZconsumes = {
 	JMod.EZ_RESOURCE_TYPES.BASICPARTS,
 	JMod.EZ_RESOURCE_TYPES.WOOD,
@@ -43,10 +44,6 @@ function ENT:CustomSetupDataTables()
 end
 if(SERVER)then
 	function ENT:CustomInit()
-		local phys = self.Entity:GetPhysicsObject()
-		if phys:IsValid()then
-			phys:SetBuoyancyRatio(.3)
-		end
 		if not(self.EZowner)then self:SetColor(Color(255, 255, 255)) end
 		self:SetProgress(0)
 		self:SetOre(0)
