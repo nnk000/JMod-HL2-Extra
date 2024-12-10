@@ -61,7 +61,7 @@ if(SERVER)then
 	end
 
 	function ENT:Use(activator)
-		local Alt = activator and activator:KeyDown(JMod.Config.General.AltFunctionKey)
+		local Alt = activator and JMod.IsAltUsing(activator)
 		local State = self:GetState()
 		if(State == STATE_FINE) then
 			if (self:GetElectricity() > 0) then
