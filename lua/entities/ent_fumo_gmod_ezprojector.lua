@@ -129,7 +129,7 @@ if(SERVER)then
 
 		if tobool(onOff) then
 			local State = self:GetState()
-			local Alt = Dude:KeyDown(JMod.Config.General.AltFunctionKey)
+			local Alt = JMod.IsAltUsing(Dude)
 
 			if State == STATE_BROKEN then
 				JMod.Hint(Dude, "destroyed", self)
